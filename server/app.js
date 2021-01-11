@@ -10,8 +10,6 @@ import 'module-alias/register';
 import './env';
 
 import indexRouter from './routes/index';
-import usersRouter from './routes/users';
-import twitterV1 from './routes/twitter-v1';
 import twitterV2 from './routes/twitter-v2';
 
 import { SESSION_SECRET } from 'babel-dotenv'
@@ -38,7 +36,6 @@ app.use(
 );
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/twitter-v2', twitterV2);
 
 // catch 404 and forward to error handler
